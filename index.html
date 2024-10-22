@@ -1,0 +1,78 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+    <!-- Especifica que el documento es HTML5 -->
+    <meta charset="UTF-8">
+    <!-- Configura el juego de caracteres en UTF-8 para soportar caracteres especiales como tildes y ñ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ajusta el ancho de la página para ser igual al ancho de la ventana del dispositivo y escala adecuadamente para dispositivos móviles -->
+    
+    <title>Estadísticas de Seguridad Vial</title> 
+    <!-- Título de la página que se mostrará en la pestaña del navegador -->
+
+    <!-- Enlace al archivo de estilos CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Vincula el archivo de estilos 'styles.css' para dar formato y estilo al documento -->
+
+    <!-- Preconexión para cargar las fuentes de Google más rápidamente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Enlace a la fuente de Google Fonts (Roboto) con dos pesos de fuente: 400 y 700 -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Inicio del cuerpo del documento -->
+
+    <!-- Sección del encabezado -->
+    <header>
+        <div class="header-content">
+            <!-- Contenedor del logo -->
+            <div class="logo">
+                <img src="assents/logo.png" alt="Agencia Nacional de Seguridad Vial">
+                <!-- Imagen del logo de la agencia. Este archivo debe estar en la carpeta "assets" bajo el nombre "logo.png". 
+                     Puedes reemplazarlo por cualquier logo que consideres apropiado para tu proyecto. -->
+            </div>
+            <nav>
+                <ul>
+                    <!-- Menú de navegación principal -->
+                    <li><a href="#">Inicio</a></li>
+                    <!-- Enlace a la página de inicio (actualmente un enlace de prueba, ya que no apunta a nada específico) -->
+                    <li><a href="#">Observatorio</a></li>
+                    <!-- Enlace a la página del observatorio -->
+                    <li><a href="#">Estadísticas</a></li>
+                    <!-- Enlace a la sección de estadísticas -->
+                    <li><a href="#">Escuela Virtual</a></li>
+                    <!-- Enlace a la escuela virtual -->
+                    <li><a href="#">Normativa</a></li>
+                    <!-- Enlace a la sección de normativa -->
+                    <li><a href="#">Transparencia</a></li>
+                    <!-- Enlace a la sección de transparencia -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección del banner de la página -->
+    <section class="banner">
+        <h1>Observatorio - Estadísticas</h1>
+        <!-- Texto destacado que aparece en la sección del banner (Encabezado Principal) -->
+    </section>
+
+    <!-- Sección para las estadísticas con Power BI embebido -->
+    <section class="estadisticas">
+        <h2>Histórico de Víctimas</h2>
+        <!-- Título de la sección donde se mostrarán las estadísticas -->
+        <p>En esta sección encontrarás un historial relacionado con víctimas fallecidas y lesionadas...</p>
+        <!-- Texto descriptivo para proporcionar contexto al contenido mostrado -->
+
+        <!-- Contenedor donde se va a incrustar el informe de Power BI -->
+        <div id="power-bi-container"></div>
+        <!-- Aquí se incrustará el iframe del informe de Power BI mediante JavaScript (archivo script.js) -->
+    </section>
+
+    <!-- Enlace al archivo JavaScript -->
+    <script src="script.js"></script>
+    <!-- Conecta el archivo JavaScript 'script.js' que se utilizará para agregar el informe de Power BI y otras funcionalidades dinámicas -->
+</body>
+</html>
