@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiénes Somos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Incluir la barra de navegación -->
+    <div id="navbar"></div> <!-- La barra de navegación se carga dinámicamente -->
+
+    <!-- Sección del Banner Principal -->
+    <section class="banner">
+        <h1>Observatorio - Estadísticas</h1> <!-- Título del banner -->
+    </section>
+
+    <!-- Sección Quiénes Somos -->
+    <section class="quienes-somos" id="quienes-somos">
+        <h2>Quiénes Somos</h2> <!-- Título de la sección -->
+        <p class="intro-text">
+            Somos un grupo de estudiantes <strong>apasionados</strong> de la Universidad de Manizales que buscamos <span class="highlight">concienciar a la sociedad</span> sobre la importancia de la seguridad vial. Creemos firmemente que <strong class="important">cada vida cuenta</strong> y que los datos pueden ser una herramienta poderosa para generar un cambio real.
+        </p>
+        <blockquote class="highlight-box">
+            <p>
+                "Nuestra misión es reducir el impacto de los accidentes de tráfico a través del análisis de datos y la sensibilización comunitaria."
+            </p>
+        </blockquote>
+        <p>
+            Con la esperanza de transformar esta iniciativa en una <span class="highlight">organización sólida y permanente</span>, trabajamos para impulsar la <strong>educación vial</strong> y crear soluciones que ayuden a <span class="highlight">prevenir tragedias</span> en nuestras carreteras.
+        </p>
+        <p class="final-message">
+            Queremos que este esfuerzo no termine aquí, sino que se convierta en un <strong>legado para la seguridad vial del país</strong>. Estamos convencidos de que con la <strong>colaboración de todos</strong>, podemos lograr un futuro más seguro para todos los usuarios de la vía.
+        </p>
+        <div class="quienes-somos-imagen">
+            <img src="assets/quienes-somos.jpg" alt="Estudiantes trabajando en seguridad vial"> <!-- Imagen representativa de la sección -->
+        </div>
+    </section>
+
+    <!-- JavaScript para cargar la barra de navegación -->
+    <script>
+        // Cargar la barra de navegación desde 'navbar.html'
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data; // Inserta el contenido de la barra de navegación
+            });
+    </script>
+</body>
+</html>
