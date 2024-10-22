@@ -49,7 +49,7 @@ nav ul li a:hover {
 
 /* Estilo del banner */
 .banner {
-    background: url('assents/banner.png') center center/cover no-repeat; /* Imagen de fondo */
+    background: url('assets/banner.png') center center/cover no-repeat; /* Imagen de fondo */
     height: 250px;
     display: flex;
     align-items: center;
