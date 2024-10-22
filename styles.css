@@ -55,7 +55,7 @@ nav ul li a:hover {
 
 /* Estilo del banner principal */
 .banner {
-    background: url('assets/banner.png') center center/cover no-repeat; /* Imagen de fondo centrada que cubre toda el área */
+    background: url('banner.png') center center/cover no-repeat; /* Imagen de fondo centrada que cubre toda el área */
     height: 300px; /* Altura del banner */
     display: flex; /* Flexbox para alinear el contenido */
     align-items: center; /* Alinea verticalmente al centro */
