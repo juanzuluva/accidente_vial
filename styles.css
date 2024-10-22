@@ -1,95 +1,235 @@
-/* Estilos globales */
+/* Estilos globales para todo el sitio */
 body {
-    font-family: 'Roboto', sans-serif; /* Cambiamos la fuente a Roboto para un diseño más moderno */
-    background-color: #f5f5f5; /* Color de fondo más suave */
-    margin: 0;
-    padding: 0;
-    color: #333; /* Color del texto */
+    font-family: 'Roboto', sans-serif; /* Define la fuente principal del sitio */
+    background-color: #f5f5f5; /* Define el color de fondo del sitio */
+    margin: 0; /* Elimina los márgenes predeterminados */
+    padding: 0; /* Elimina el padding predeterminado */
+    color: #333; /* Define el color del texto general */
 }
 
-/* Estilos del encabezado */
+/* Estilos para el encabezado */
 header {
-    background-color: #003366; /* Azul oscuro */
-    color: #ffffff;
-    padding: 15px 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #003366; /* Fondo azul oscuro para el encabezado */
+    color: #ffffff; /* Texto blanco para mejorar la visibilidad en el fondo oscuro */
+    padding: 15px 20px; /* Espaciado interno para que los elementos del encabezado no estén pegados al borde */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra al encabezado para darle profundidad */
 }
 
+/* Contenedor del encabezado: logo y barra de navegación */
 .header-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: flex; /* Flexbox para alinear elementos en una línea */
+    align-items: center; /* Centra los elementos verticalmente */
+    justify-content: space-between; /* Alinea los elementos en extremos opuestos */
 }
 
+/* Logo del encabezado */
 .logo img {
-    max-width: 150px; /* Ajustar el tamaño del logo */
+    max-width: 150px; /* Define un ancho máximo para la imagen del logo */
 }
 
+/* Lista de navegación en el encabezado */
 nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+    list-style: none; /* Elimina las viñetas predeterminadas de la lista */
+    margin: 0; /* Elimina el margen */
+    padding: 0; /* Elimina el padding */
+    display: flex; /* Flexbox para mostrar los elementos de la lista en una línea */
 }
 
+/* Elementos de la lista de navegación */
 nav ul li {
-    margin-right: 20px;
+    margin-right: 20px; /* Espacio entre los elementos de la lista */
 }
 
+/* Estilo para los enlaces de la navegación */
 nav ul li a {
-    color: #ffffff; /* Texto blanco */
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
+    color: #ffffff; /* Texto blanco para resaltar sobre el fondo oscuro */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    font-weight: bold; /* Hace el texto del enlace más grueso */
+    transition: color 0.3s; /* Transición suave al cambiar el color del enlace */
 }
 
+/* Estilo para los enlaces al pasar el ratón */
 nav ul li a:hover {
-    color: #ffcc00; /* Color amarillo para resaltar */
+    color: #ffcc00; /* Cambia el color a amarillo al pasar el ratón por encima */
 }
 
-/* Estilo del banner */
+/* Estilo del banner principal */
 .banner {
-    background: url('banner.png') center center/cover no-repeat; /* Imagen de fondo */
-    height: 250px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-    text-align: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background: url('assets/banner.png') center center/cover no-repeat; /* Imagen de fondo centrada que cubre toda el área */
+    height: 300px; /* Altura del banner */
+    display: flex; /* Flexbox para alinear el contenido */
+    align-items: center; /* Alinea verticalmente al centro */
+    justify-content: center; /* Alinea horizontalmente al centro */
+    color: #ffffff; /* Texto blanco para resaltar sobre el fondo del banner */
+    text-align: center; /* Centra el texto dentro del banner */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra para dar profundidad */
 }
 
+/* Título dentro del banner */
 .banner h1 {
-    font-size: 2.5em;
-    font-weight: bold;
+    font-size: 2.5em; /* Define el tamaño de la fuente */
+    font-weight: bold; /* Hace el título más grueso */
 }
 
-/* Sección de estadísticas */
+/* Sección "Quiénes Somos" */
+.quienes-somos {
+    padding: 40px; /* Espaciado interno */
+    background-color: #f9f9f9; /* Fondo gris claro */
+    margin: 30px auto; /* Centra la sección horizontalmente y añade margen */
+    max-width: 1200px; /* Define un ancho máximo para la sección */
+    border-radius: 8px; /* Bordes redondeados */
+    text-align: center; /* Centra el texto */
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1); /* Añade una sombra para dar profundidad */
+}
+
+/* Título de la sección "Quiénes Somos" */
+.quienes-somos h2 {
+    font-size: 2.5em; /* Tamaño del título */
+    color: #003366; /* Azul oscuro para el título */
+    margin-bottom: 20px; /* Espaciado inferior */
+    font-weight: 700; /* Negrita para hacer el título más llamativo */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    letter-spacing: 1.5px; /* Añade espacio entre letras */
+}
+
+/* Texto introductorio */
+.intro-text {
+    font-size: 1.3em; /* Tamaño del texto */
+    line-height: 1.6; /* Espaciado entre líneas */
+    color: #444; /* Color del texto */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+/* Resaltar palabras clave en el texto */
+.highlight {
+    color: #e67e22; /* Color naranja para destacar */
+    font-weight: bold; /* Negrita */
+}
+
+/* Texto importante */
+.important {
+    color: #d35400; /* Naranja oscuro */
+    font-weight: bold; /* Negrita */
+}
+
+/* Caja de resalto (cita o información importante) */
+.highlight-box {
+    border-left: 4px solid #003366; /* Borde azul oscuro para destacar la caja */
+    background-color: #eaf2f8; /* Fondo gris suave */
+    padding: 15px 20px; /* Espaciado interno */
+    margin: 20px 0; /* Margen superior e inferior */
+    font-style: italic; /* Texto en cursiva */
+    font-size: 1.2em; /* Tamaño de fuente */
+    color: #003366; /* Azul oscuro */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+/* Mensaje final de la sección */
+.final-message {
+    font-size: 1.4em; /* Tamaño del texto */
+    color: #2c3e50; /* Azul oscuro para destacar */
+    font-weight: 500; /* Seminegrita */
+    line-height: 1.7; /* Espaciado entre líneas */
+    margin-top: 30px; /* Espaciado superior */
+}
+
+/* Imagen dentro de la sección "Quiénes Somos" */
+.quienes-somos-imagen img {
+    max-width: 100%; /* Ancho máximo del contenedor */
+    height: auto; /* Mantener proporción */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2); /* Añade sombra */
+    margin-top: 30px; /* Espaciado superior */
+}
+
+/* Sección "Histórico de Víctimas" */
 .estadisticas {
-    padding: 40px;
-    background-color: #ffffff;
-    margin: 30px auto;
-    max-width: 1200px;
-    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    padding: 40px; /* Espaciado interno */
+    background-color: #ffffff; /* Fondo blanco */
+    margin: 30px auto; /* Margen superior e inferior y centrado */
+    max-width: 1200px; /* Ancho máximo de la sección */
+    border-radius: 8px; /* Bordes redondeados */
+    text-align: center; /* Texto centrado */
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
 }
 
+/* Título de la sección "Histórico de Víctimas" */
 .estadisticas h2 {
-    font-size: 1.8em;
-    margin-bottom: 20px;
-    color: #003366;
+    font-size: 2.5em; /* Tamaño del título */
+    color: #d35400; /* Naranja oscuro para diferenciar */
+    margin-bottom: 20px; /* Espaciado inferior */
+    font-weight: 700; /* Negrita */
+    letter-spacing: 1px; /* Espacio entre letras */
 }
 
-.estadisticas p {
-    margin-bottom: 30px;
-    line-height: 1.6;
+/* Contenedor de Power BI */
+#power-bi-container {
+    margin-top: 30px; /* Espaciado superior */
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2); /* Añade una sombra */
+    border-radius: 8px; /* Bordes redondeados */
+    overflow: hidden; /* Ocultar desbordamiento */
 }
 
-/* Estilo del iframe de Power BI */
-#power-bi-container iframe {
-    width: 100%;
-    height: 600px;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+/* Estilo para la sección de contacto */
+.contacto {
+    padding: 40px; /* Espaciado interno */
+    background-color: #ffffff; /* Fondo blanco */
+    margin: 30px auto; /* Margen superior e inferior y centrado */
+    max-width: 800px; /* Ancho máximo de la sección */
+    border-radius: 8px; /* Bordes redondeados */
+    text-align: center; /* Texto centrado */
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+}
+
+/* Título de la sección de contacto */
+.contacto h2 {
+    font-size: 2em; /* Tamaño del título */
+    color: #003366; /* Color del título */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+/* Estilo del formulario de contacto */
+form {
+    display: flex; /* Flexbox para organizar los campos */
+    flex-direction: column; /* Dirección vertical */
+    gap: 20px; /* Espacio entre los elementos */
+}
+
+/* Grupo de cada campo del formulario */
+.form-group {
+    text-align: left; /* Alinear el texto a la izquierda */
+}
+
+/* Etiqueta de cada campo */
+.form-group label {
+    font-weight: bold; /* Negrita para resaltar */
+    display: block; /* Bloque para que cada etiqueta ocupe toda la línea */
+    margin-bottom: 5px; /* Espacio inferior */
+}
+
+/* Campos de entrada y área de texto */
+.form-group input,
+.form-group textarea {
+    width: 100%; /* Ancho completo del contenedor */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde gris */
+    border-radius: 4px; /* Bordes redondeados */
+    font-size: 1em; /* Tamaño de fuente */
+}
+
+/* Botón de envío del formulario */
+button[type="submit"] {
+    background-color: #003366; /* Fondo del botón */
+    color: white; /* Texto blanco */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    font-size: 1.2em; /* Tamaño del texto */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: background-color 0.3s; /* Transición suave al cambiar el color */
+}
+
+/* Estilo del botón de envío al pasar el ratón */
+button[type="submit"]:hover {
+    background-color: #005bb5; /* Cambia el color del botón al pasar el ratón */
 }
