@@ -67,8 +67,13 @@ nav ul li a:hover {
 
 /* Título dentro del banner */
 .banner h1 {
-    font-size: 2.5em; /* Define el tamaño de la fuente */
+    font-size: 3em; /* Define el tamaño de la fuente */
     font-weight: bold; /* Hace el título más grueso */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    letter-spacing: 2px; /* Añade espacio entre letras */
+    color: #000000; /* Color amarillo para el título */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Añade sombra para darle profundidad al texto */
+    margin: 0; /* Elimina el margen predeterminado */
 }
 
 /* Sección "Quiénes Somos" */
@@ -156,10 +161,11 @@ nav ul li a:hover {
 /* Título de la sección "Histórico de Víctimas" */
 .estadisticas h2 {
     font-size: 2.5em; /* Tamaño del título */
-    color: #d35400; /* Naranja oscuro para diferenciar */
+    color: #003366; /* Azul oscuro, el mismo que "Quiénes Somos" */
     margin-bottom: 20px; /* Espaciado inferior */
     font-weight: 700; /* Negrita */
-    letter-spacing: 1px; /* Espacio entre letras */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    letter-spacing: 1.5px; /* Añade espacio entre letras */
 }
 
 /* Contenedor de Power BI */
