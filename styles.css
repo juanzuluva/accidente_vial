@@ -1,241 +1,280 @@
 /* Estilos globales para todo el sitio */
 body {
-    font-family: 'Roboto', sans-serif; /* Define la fuente principal del sitio */
-    background-color: #f5f5f5; /* Define el color de fondo del sitio */
-    margin: 0; /* Elimina los márgenes predeterminados */
-    padding: 0; /* Elimina el padding predeterminado */
-    color: #333; /* Define el color del texto general */
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    color: #333;
 }
 
 /* Estilos para el encabezado */
 header {
-    background-color: #003366; /* Fondo azul oscuro para el encabezado */
-    color: #ffffff; /* Texto blanco para mejorar la visibilidad en el fondo oscuro */
-    padding: 15px 20px; /* Espaciado interno para que los elementos del encabezado no estén pegados al borde */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra al encabezado para darle profundidad */
+    background-color: #003366;
+    color: #ffffff;
+    padding: 15px 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Contenedor del encabezado: logo y barra de navegación */
 .header-content {
-    display: flex; /* Flexbox para alinear elementos en una línea */
-    align-items: center; /* Centra los elementos verticalmente */
-    justify-content: space-between; /* Alinea los elementos en extremos opuestos */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: wrap; /* Esto permitirá que los elementos se ajusten en diferentes líneas si no hay espacio */
+}
+
+/* Ajuste del contenedor del logo */
+.logo {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    min-width: 150px; /* Tamaño mínimo del logo */
+}
+
+/* Título observatorio centrado */
+.titulo-observatorio {
+    font-size: 1.5em;
+    color: #ffffff;
+    text-align: center;
+    white-space: nowrap; /* Evita el salto de línea del título */
+    flex-grow: 2; /* Permite que el título ocupe más espacio cuando sea posible */
 }
 
 /* Logo del encabezado */
 .logo img {
-    max-width: 150px; /* Define un ancho máximo para la imagen del logo */
+    max-width: 150px;
 }
 
 /* Lista de navegación en el encabezado */
 nav ul {
-    list-style: none; /* Elimina las viñetas predeterminadas de la lista */
-    margin: 0; /* Elimina el margen */
-    padding: 0; /* Elimina el padding */
-    display: flex; /* Flexbox para mostrar los elementos de la lista en una línea */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    flex-wrap: wrap; /* Permitir que los enlaces se reorganicen si es necesario */
 }
 
 /* Elementos de la lista de navegación */
 nav ul li {
-    margin-right: 20px; /* Espacio entre los elementos de la lista */
+    margin-right: 20px;
 }
 
 /* Estilo para los enlaces de la navegación */
 nav ul li a {
-    color: #ffffff; /* Texto blanco para resaltar sobre el fondo oscuro */
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
-    font-weight: bold; /* Hace el texto del enlace más grueso */
-    transition: color 0.3s; /* Transición suave al cambiar el color del enlace */
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
 /* Estilo para los enlaces al pasar el ratón */
 nav ul li a:hover {
-    color: #ffcc00; /* Cambia el color a amarillo al pasar el ratón por encima */
+    color: #ffcc00;
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center; /* Centrar el contenido en pantallas pequeñas */
+    }
+
+    nav ul {
+        justify-content: center; /* Centra los enlaces de navegación */
+        margin-top: 10px;
+    }
+
+    .titulo-observatorio {
+        margin-top: 10px;
+    }
 }
 
 /* Estilo del banner principal */
 .banner {
-    background: url('banner.png') center center/cover no-repeat; /* Imagen de fondo centrada que cubre toda el área */
-    height: 300px; /* Altura del banner */
-    display: flex; /* Flexbox para alinear el contenido */
-    align-items: center; /* Alinea verticalmente al centro */
-    justify-content: center; /* Alinea horizontalmente al centro */
-    color: #ffffff; /* Texto blanco para resaltar sobre el fondo del banner */
-    text-align: center; /* Centra el texto dentro del banner */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra para dar profundidad */
+    background: url('banner.png') center center/cover no-repeat;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Título dentro del banner */
 .banner h1 {
-    font-size: 3em; /* Define el tamaño de la fuente */
-    font-weight: bold; /* Hace el título más grueso */
-    text-transform: uppercase; /* Convierte el texto a mayúsculas */
-    letter-spacing: 2px; /* Añade espacio entre letras */
-    color: #000000; /* Color amarillo para el título */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Añade sombra para darle profundidad al texto */
-    margin: 0; /* Elimina el margen predeterminado */
+    font-size: 3em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #000000;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    margin: 0;
 }
 
 /* Sección "Quiénes Somos" */
 .quienes-somos {
-    padding: 40px; /* Espaciado interno */
-    background-color: #f9f9f9; /* Fondo gris claro */
-    margin: 30px auto; /* Centra la sección horizontalmente y añade margen */
-    max-width: 1200px; /* Define un ancho máximo para la sección */
-    border-radius: 8px; /* Bordes redondeados */
-    text-align: center; /* Centra el texto */
-    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1); /* Añade una sombra para dar profundidad */
+    padding: 40px;
+    background-color: #f9f9f9;
+    margin: 30px auto;
+    max-width: 1200px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 /* Título de la sección "Quiénes Somos" */
 .quienes-somos h2 {
-    font-size: 2.5em; /* Tamaño del título */
-    color: #003366; /* Azul oscuro para el título */
-    margin-bottom: 20px; /* Espaciado inferior */
-    font-weight: 700; /* Negrita para hacer el título más llamativo */
-    text-transform: uppercase; /* Convierte el texto a mayúsculas */
-    letter-spacing: 1.5px; /* Añade espacio entre letras */
+    font-size: 2.5em;
+    color: #003366;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
 }
 
 /* Texto introductorio */
 .intro-text {
-    font-size: 1.3em; /* Tamaño del texto */
-    line-height: 1.6; /* Espaciado entre líneas */
-    color: #444; /* Color del texto */
-    margin-bottom: 20px; /* Espaciado inferior */
+    font-size: 1.3em;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 20px;
 }
 
 /* Resaltar palabras clave en el texto */
 .highlight {
-    color: #e67e22; /* Color naranja para destacar */
-    font-weight: bold; /* Negrita */
+    color: #e67e22;
+    font-weight: bold;
 }
 
 /* Texto importante */
 .important {
-    color: #d35400; /* Naranja oscuro */
-    font-weight: bold; /* Negrita */
+    color: #d35400;
+    font-weight: bold;
 }
 
 /* Caja de resalto (cita o información importante) */
 .highlight-box {
-    border-left: 4px solid #003366; /* Borde azul oscuro para destacar la caja */
-    background-color: #eaf2f8; /* Fondo gris suave */
-    padding: 15px 20px; /* Espaciado interno */
-    margin: 20px 0; /* Margen superior e inferior */
-    font-style: italic; /* Texto en cursiva */
-    font-size: 1.2em; /* Tamaño de fuente */
-    color: #003366; /* Azul oscuro */
-    text-align: left; /* Alinea el texto a la izquierda */
+    border-left: 4px solid #003366;
+    background-color: #eaf2f8;
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-style: italic;
+    font-size: 1.2em;
+    color: #003366;
+    text-align: left;
 }
 
 /* Mensaje final de la sección */
 .final-message {
-    font-size: 1.4em; /* Tamaño del texto */
-    color: #2c3e50; /* Azul oscuro para destacar */
-    font-weight: 500; /* Seminegrita */
-    line-height: 1.7; /* Espaciado entre líneas */
-    margin-top: 30px; /* Espaciado superior */
+    font-size: 1.4em;
+    color: #2c3e50;
+    font-weight: 500;
+    line-height: 1.7;
+    margin-top: 30px;
 }
 
 /* Imagen dentro de la sección "Quiénes Somos" */
 .quienes-somos-imagen img {
-    max-width: 100%; /* Ancho máximo del contenedor */
-    height: auto; /* Mantener proporción */
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2); /* Añade sombra */
-    margin-top: 30px; /* Espaciado superior */
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
+    margin-top: 30px;
 }
 
 /* Sección "Histórico de Víctimas" */
 .estadisticas {
-    padding: 40px; /* Espaciado interno */
-    background-color: #ffffff; /* Fondo blanco */
-    margin: 30px auto; /* Margen superior e inferior y centrado */
-    max-width: 1200px; /* Ancho máximo de la sección */
-    border-radius: 8px; /* Bordes redondeados */
-    text-align: center; /* Texto centrado */
-    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    padding: 40px;
+    background-color: #ffffff;
+    margin: 30px auto;
+    max-width: 1200px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 /* Título de la sección "Histórico de Víctimas" */
 .estadisticas h2 {
-    font-size: 2.5em; /* Tamaño del título */
-    color: #003366; /* Azul oscuro, el mismo que "Quiénes Somos" */
-    margin-bottom: 20px; /* Espaciado inferior */
-    font-weight: 700; /* Negrita */
-    text-transform: uppercase; /* Convierte el texto a mayúsculas */
-    letter-spacing: 1.5px; /* Añade espacio entre letras */
+    font-size: 2.5em;
+    color: #003366;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
 }
 
 /* Contenedor de Power BI */
 #power-bi-container {
-    margin-top: 30px; /* Espaciado superior */
-    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2); /* Añade una sombra */
-    border-radius: 8px; /* Bordes redondeados */
-    overflow: hidden; /* Ocultar desbordamiento */
+    margin-top: 30px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 /* Estilo para la sección de contacto */
 .contacto {
-    padding: 40px; /* Espaciado interno */
-    background-color: #ffffff; /* Fondo blanco */
-    margin: 30px auto; /* Margen superior e inferior y centrado */
-    max-width: 800px; /* Ancho máximo de la sección */
-    border-radius: 8px; /* Bordes redondeados */
-    text-align: center; /* Texto centrado */
-    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    padding: 40px;
+    background-color: #ffffff;
+    margin: 30px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 /* Título de la sección de contacto */
 .contacto h2 {
-    font-size: 2em; /* Tamaño del título */
-    color: #003366; /* Color del título */
-    margin-bottom: 20px; /* Espaciado inferior */
+    font-size: 2em;
+    color: #003366;
+    margin-bottom: 20px;
 }
 
 /* Estilo del formulario de contacto */
 form {
-    display: flex; /* Flexbox para organizar los campos */
-    flex-direction: column; /* Dirección vertical */
-    gap: 20px; /* Espacio entre los elementos */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 /* Grupo de cada campo del formulario */
 .form-group {
-    text-align: left; /* Alinear el texto a la izquierda */
+    text-align: left;
 }
 
 /* Etiqueta de cada campo */
 .form-group label {
-    font-weight: bold; /* Negrita para resaltar */
-    display: block; /* Bloque para que cada etiqueta ocupe toda la línea */
-    margin-bottom: 5px; /* Espacio inferior */
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
 }
 
 /* Campos de entrada y área de texto */
 .form-group input,
 .form-group textarea {
-    width: 100%; /* Ancho completo del contenedor */
-    padding: 10px; /* Espaciado interno */
-    border: 1px solid #ccc; /* Borde gris */
-    border-radius: 4px; /* Bordes redondeados */
-    font-size: 1em; /* Tamaño de fuente */
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
 }
 
 /* Botón de envío del formulario */
 button[type="submit"] {
-    background-color: #003366; /* Fondo del botón */
-    color: white; /* Texto blanco */
-    padding: 10px 20px; /* Espaciado interno */
-    border: none; /* Sin borde */
-    border-radius: 4px; /* Bordes redondeados */
-    font-size: 1.2em; /* Tamaño del texto */
-    cursor: pointer; /* Cambia el cursor al pasar por encima */
-    transition: background-color 0.3s; /* Transición suave al cambiar el color */
+    background-color: #003366;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 /* Estilo del botón de envío al pasar el ratón */
 button[type="submit"]:hover {
-    background-color: #005bb5; /* Cambia el color del botón al pasar el ratón */
+    background-color: #005bb5;
 }
