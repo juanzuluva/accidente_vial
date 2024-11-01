@@ -10,15 +10,51 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Barra de navegación -->
     <div id="navbar"></div>
 
+    <!-- Banner principal -->
     <section class="banner">
+        <!-- <h1>Observatorio - Codificación</h1> -->
     </section>
 
-    <section class="contenido-seccion" id="codificacion">
+    <!-- Índice de navegación interna para la sección de Codificación -->
+    <!-- <section class="contenido-seccion" id="codificacion">
         <h2>Codificación</h2>
         <p class="intro-text">
-            La <strong>codificación</strong> es fundamental en el procesamiento de datos para garantizar que la información se maneje de manera consistente y eficiente. En seguridad vial, la codificación de datos facilita el análisis de patrones y tendencias.
+            Explora los temas relacionados con codificación en el análisis de datos de seguridad vial:
+        </p>
+        <ul>
+            <li><a href="#errores">Errores</a></li>
+            <li><a href="#haming">Haming</a></li>
+            <li><a href="#binario">Binario</a></li>
+        </ul>
+    </section> -->
+
+     <!-- Sección Binario -->
+     <section class="contenido-seccion" id="binario">
+        <h2>Binario</h2>
+        <p class="intro-text">
+            El <strong>código binario</strong> es el lenguaje básico de las computadoras, utilizando solo 0s y 1s. Es la base para el almacenamiento y procesamiento de toda la información digital.
+        </p>
+        <blockquote class="highlight-box">
+            <p>
+                "La simplicidad del código binario lo hace poderoso y versátil para manejar cualquier tipo de dato digital."
+            </p>
+        </blockquote>
+        <p>
+            En análisis de seguridad vial, el binario permite procesar y almacenar grandes cantidades de datos, <span class="highlight">facilitando el análisis avanzado</span> para la toma de decisiones.
+        </p>
+        <div class="contenido-imagen">
+            <img src="conversion-a-binario.jpeg" alt="Representación de código binario">
+        </div>
+    </section>
+
+    <!-- Sección de Codificación -->
+    <section class="contenido-seccion">
+        <h2>Codificación</h2>
+        <p class="intro-text">
+            La codificación es fundamental en el procesamiento de datos para garantizar que la información se maneje de manera consistente y eficiente. En seguridad vial, la codificación de datos facilita el análisis de patrones y tendencias.
         </p>
         <blockquote class="highlight-box">
             <p>
@@ -33,6 +69,47 @@
         </div>
     </section>
 
+    <!-- Sección Errores -->
+    <section class="contenido-seccion" id="errores">
+        <h2>Errores</h2>
+        <p class="intro-text">
+            Los errores en el manejo de datos pueden afectar gravemente los resultados del análisis. Comprender los <strong>tipos de errores</strong> y cómo mitigarlos es esencial en proyectos de datos de seguridad vial.
+        </p>
+        <blockquote class="highlight-box">
+            <p>
+                "Identificar y corregir errores en los datos es vital para un análisis preciso y fiable."
+            </p>
+        </blockquote>
+        <p>
+            Este conocimiento permite <span class="highlight">minimizar los sesgos</span> y asegurar que las políticas de seguridad vial se basen en datos confiables y precisos.
+        </p>
+        <div class="contenido-imagen">
+            <img src="errores.jpg" alt="Análisis de errores en datos">
+        </div>
+    </section>
+
+    <!-- Sección Haming -->
+    <section class="contenido-seccion" id="haming">
+        <h2>Haming</h2>
+        <p class="intro-text">
+            El <strong>código de Hamming</strong> es una técnica utilizada para detectar y corregir errores en la transmisión de datos, asegurando la integridad de la información recibida.
+        </p>
+        <blockquote class="highlight-box">
+            <p>
+                "La corrección de errores asegura que los datos mantengan su precisión y fiabilidad, incluso en entornos críticos."
+            </p>
+        </blockquote>
+        <p>
+            Su implementación en sistemas de seguridad vial permite <span class="highlight">minimizar la pérdida de datos</span> en procesos de recopilación y transmisión de información.
+        </p>
+        <div class="contenido-imagen">
+            <img src="haming.jpg" alt="Aplicación del código de Hamming">
+        </div>
+    </section>
+
+   
+
+    <!-- JavaScript para cargar la barra de navegación -->
     <script>
         fetch('navbar.html')
             .then(response => response.text())
