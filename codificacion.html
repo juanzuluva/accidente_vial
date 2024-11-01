@@ -70,9 +70,9 @@
     </section> -->
 
     
-    <!-- Sección Haming -->
-    <section class="contenido-seccion" id="haming">
-        <h2>Haming</h2>
+    <!-- Sección Hamming -->
+    <section class="contenido-seccion" id="hamming">
+        <h2>Hamming</h2>
         <p class="intro-text">
             El <strong>código de Hamming</strong> es una técnica utilizada para detectar y corregir errores en la transmisión de datos, asegurando la integridad de la información recibida.
         </p>
@@ -81,12 +81,50 @@
                 "La corrección de errores asegura que los datos mantengan su precisión y fiabilidad, incluso en entornos críticos."
             </p>
         </blockquote>
-        <p>
-            Su implementación en sistemas de seguridad vial permite <span class="highlight">minimizar la pérdida de datos</span> en procesos de recopilación y transmisión de información.
+        <p class="detailed-explanation">
+            El método de codificación Hamming agrega bits de paridad a un mensaje para detectar y corregir errores en la transmisión. Para aplicar el código Hamming al número binario <strong>1101100001100</strong>, vamos a seguir el procedimiento estándar para obtener el código Hamming de este valor.
         </p>
-        <div class="contenido-imagen">
-            <img src="haming.jpg" alt="Aplicación del código de Hamming">
-        </div>
+
+        <ol class="hamming-steps">
+            <li>
+                <strong>Identificar la cantidad de bits de paridad necesarios:</strong> <br>
+                Para una palabra de datos de 13 bits, se necesitan al menos 4 bits de paridad, porque (2<sup>4</sup> = 16), que es suficiente para cubrir nuestros 13 bits de datos más los bits de paridad.
+            </li>
+            <li>
+                <strong>Colocar los bits de paridad en las posiciones correspondientes:</strong> <br>
+                Los bits de paridad se colocan en posiciones que son potencias de 2 (1, 2, 4, 8, ...). La cadena de bits de datos se ajusta dejando esas posiciones de paridad en blanco, y después se completarán.
+                <ul class="positions-list">
+                    <li>Posición 1: paridad</li>
+                    <li>Posición 2: paridad</li>
+                    <li>Posición 3: 1</li>
+                    <li>Posición 4: paridad</li>
+                    <li>Posición 5: 1</li>
+                    <li>Posición 6: 0</li>
+                    <li>Posición 7: 1</li>
+                    <li>Posición 8: paridad</li>
+                    <li>Posición 9: 0</li>
+                    <li>Posición 10: 0</li>
+                    <li>Posición 11: 0</li>
+                    <li>Posición 12: 1</li>
+                    <li>Posición 13: 1</li>
+                    <li>Posición 14: 0</li>
+                    <li>Posición 15: 0</li>
+                </ul>
+                Esto nos da una secuencia con espacios en blanco para los bits de paridad:<br>
+                <code class="bit-sequence">_ _ 1 _ 1 0 1 _ 0 0 0 1 1 0 0</code>
+            </li>
+            <li>
+                <strong>Calcular los valores de los bits de paridad:</strong> <br>
+                Los bits de paridad se calculan para que la suma de los bits en posiciones específicas sea par (paridad par). Vamos a calcular los valores de los bits de paridad y colocarlos en la secuencia.
+            </li>
+        </ol>
+        
+        <p class="final-sequence">
+            El código Hamming para el número binario <strong>1101100001100</strong> es: <code class="bit-sequence">10101011100001100</code>
+        </p>
+        <p class="final-message">
+            Este código Hamming ahora incluye los bits de paridad para poder detectar y corregir errores en la transmisión de estos datos.
+        </p>
     </section>
 
    <!-- Sección Errores -->
