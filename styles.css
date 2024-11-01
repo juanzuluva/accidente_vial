@@ -21,7 +21,7 @@ header {
     align-items: center;
     justify-content: space-between;
     position: relative;
-    flex-wrap: wrap; /* Esto permitirá que los elementos se ajusten en diferentes líneas si no hay espacio */
+    flex-wrap: wrap;
 }
 
 /* Ajuste del contenedor del logo */
@@ -29,7 +29,7 @@ header {
     display: flex;
     align-items: center;
     flex-grow: 1;
-    min-width: 150px; /* Tamaño mínimo del logo */
+    min-width: 150px;
 }
 
 /* Título observatorio centrado */
@@ -37,8 +37,8 @@ header {
     font-size: 3.5em;
     color: #ffffff;
     text-align: center;
-    white-space: nowrap; /* Evita el salto de línea del título */
-    flex-grow: 2; /* Permite que el título ocupe más espacio cuando sea posible */
+    white-space: nowrap;
+    flex-grow: 2;
 }
 
 /* Logo del encabezado */
@@ -54,7 +54,7 @@ nav ul {
     display: flex;
     flex-grow: 1;
     justify-content: flex-end;
-    flex-wrap: wrap; /* Permitir que los enlaces se reorganicen si es necesario */
+    flex-wrap: wrap;
 }
 
 /* Elementos de la lista de navegación */
@@ -79,11 +79,11 @@ nav ul li a:hover {
 @media (max-width: 768px) {
     .header-content {
         flex-direction: column;
-        text-align: center; /* Centrar el contenido en pantallas pequeñas */
+        text-align: center;
     }
 
     nav ul {
-        justify-content: center; /* Centra los enlaces de navegación */
+        justify-content: center;
         margin-top: 10px;
     }
 
@@ -115,19 +115,19 @@ nav ul li a:hover {
     margin: 0;
 }
 
-/* Sección "Quiénes Somos" */
-.quienes-somos {
+/* Sección principal de contenido */
+.contenido-seccion {
     padding: 40px;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
     margin: 30px auto;
-    max-width: 1200px;
+    max-width: 1000px;
     border-radius: 8px;
-    text-align: center;
     box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-/* Título de la sección "Quiénes Somos" */
-.quienes-somos h2 {
+/* Título de las secciones */
+.contenido-seccion h2 {
     font-size: 2.5em;
     color: #003366;
     margin-bottom: 20px;
@@ -138,10 +138,45 @@ nav ul li a:hover {
 
 /* Texto introductorio */
 .intro-text {
-    font-size: 1.3em;
+    font-size: 1.2em;
     line-height: 1.6;
     color: #444;
     margin-bottom: 20px;
+}
+
+/* Lista de enlaces en la sección de Codificación */
+.contenido-seccion ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.contenido-seccion ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.contenido-seccion ul li a {
+    color: #003366;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contenido-seccion ul li a:hover {
+    color: #e67e22;
+}
+
+/* Caja de resalto (cita o información importante) */
+.highlight-box {
+    border-left: 5px solid #003366;
+    background-color: #eaf2f8;
+    padding: 20px;
+    margin: 20px 0;
+    font-style: italic;
+    font-size: 1.1em;
+    color: #003366;
+    text-align: left;
 }
 
 /* Resaltar palabras clave en el texto */
@@ -156,181 +191,71 @@ nav ul li a:hover {
     font-weight: bold;
 }
 
-/* Caja de resalto (cita o información importante) */
-.highlight-box {
-    border-left: 4px solid #003366;
-    background-color: #eaf2f8;
-    padding: 15px 20px;
-    margin: 20px 0;
-    font-style: italic;
-    font-size: 1.2em;
-    color: #003366;
-    text-align: left;
-}
-
 /* Mensaje final de la sección */
 .final-message {
     font-size: 1.4em;
     color: #2c3e50;
     font-weight: 500;
     line-height: 1.7;
-    margin-top: 30px;
-}
-
-/* Imagen dentro de la sección "Quiénes Somos" */
-.quienes-somos-imagen img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
-    margin-top: 30px;
-}
-
-/* Sección "Histórico de Víctimas" */
-.estadisticas {
-    padding: 40px;
-    background-color: #ffffff;
-    margin: 30px auto;
-    max-width: 1200px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
-}
-
-/* Título de la sección "Histórico de Víctimas" */
-.estadisticas h2 {
-    font-size: 2.5em;
-    color: #003366;
-    margin-bottom: 20px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-}
-
-/* Contenedor de Power BI */
-#power-bi-container {
-    margin-top: 30px;
-    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-/* Estilo para la sección de contacto */
-.contacto {
-    padding: 40px;
-    background-color: #ffffff;
-    margin: 30px auto;
-    max-width: 800px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
-}
-
-/* Título de la sección de contacto */
-.contacto h2 {
-    font-size: 2em;
-    color: #003366;
-    margin-bottom: 20px;
-}
-
-/* Estilo del formulario de contacto */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-/* Grupo de cada campo del formulario */
-.form-group {
     text-align: left;
 }
 
-/* Etiqueta de cada campo */
-.form-group label {
-    font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
-}
-
-/* Campos de entrada y área de texto */
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1em;
-}
-
-/* Botón de envío del formulario */
-button[type="submit"] {
-    background-color: #003366;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    font-size: 1.2em;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-/* Estilo del botón de envío al pasar el ratón */
-button[type="submit"]:hover {
-    background-color: #005bb5;
-}
-
-/* Estilo general para las nuevas secciones Codificación, Errores, Haming y Binario */
-.contenido-seccion {
-    padding: 40px;
-    background-color: #f9f9f9;
-    margin: 30px auto;
-    max-width: 1200px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
-}
-
-/* Título de cada nueva sección */
-.contenido-seccion h2 {
-    font-size: 2.5em;
-    color: #003366;
-    margin-bottom: 20px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-}
-
-/* Texto introductorio en las nuevas secciones */
-.intro-text {
-    font-size: 1.3em;
+/* Estilo para explicación detallada */
+.detailed-explanation {
+    font-size: 1.1em;
     line-height: 1.6;
     color: #444;
     margin-bottom: 20px;
-}
-
-/* Cajas destacadas (como citas o información importante) */
-.highlight-box {
-    border-left: 4px solid #003366;
-    background-color: #eaf2f8;
-    padding: 15px 20px;
-    margin: 20px 0;
-    font-style: italic;
-    font-size: 1.2em;
-    color: #003366;
     text-align: left;
 }
 
-/* Resaltar palabras clave en el texto */
-.highlight {
-    color: #e67e22;
-    font-weight: bold;
+/* Estilo para los pasos del código de Hamming */
+.hamming-steps {
+    list-style-type: decimal;
+    padding-left: 20px;
+    text-align: left;
+    font-size: 1em;
+    line-height: 1.6;
 }
 
-/* Imagen representativa de cada sección */
+.hamming-steps li {
+    margin-bottom: 15px;
+}
+
+/* Estilo para la lista de posiciones de bits */
+.positions-list {
+    list-style-type: none;
+    padding-left: 20px;
+    margin: 10px 0;
+    color: #003366;
+}
+
+.positions-list li {
+    margin-bottom: 5px;
+}
+
+/* Estilo para secuencias de bits */
+.bit-sequence {
+    display: block;
+    background-color: #eaf2f8;
+    color: #003366;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-family: monospace;
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+/* Imagen dentro de la sección */
 .contenido-imagen img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
     box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
     margin-top: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
