@@ -5,16 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Haming</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="navbar"></div>
 
-    <main>
-        <h1>Haming</h1>
-        <p>El código de Hamming es una técnica de corrección de errores que permite detectar y corregir errores en la transmisión de datos. Este método se utiliza ampliamente en sistemas de comunicación y en el procesamiento de datos para garantizar la integridad de la información transmitida.</p>
-        <p>En esta página, exploraremos cómo funciona el código de Hamming y su aplicación en el análisis de datos para la seguridad vial.</p>
-    </main>
+    <section class="banner">
+    </section>
 
-    <script src="script.js"></script>
+    <section class="contenido-seccion" id="haming">
+        <h2>Haming</h2>
+        <p class="intro-text">
+            El <strong>código de Hamming</strong> es una técnica utilizada para detectar y corregir errores en la transmisión de datos, asegurando la integridad de la información recibida.
+        </p>
+        <blockquote class="highlight-box">
+            <p>
+                "La corrección de errores asegura que los datos mantengan su precisión y fiabilidad, incluso en entornos críticos."
+            </p>
+        </blockquote>
+        <p>
+            Su implementación en sistemas de seguridad vial permite <span class="highlight">minimizar la pérdida de datos</span> en procesos de recopilación y transmisión de información.
+        </p>
+        <div class="contenido-imagen">
+            <img src="haming.jpg" alt="Aplicación del código de Hamming">
+        </div>
+    </section>
+
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+    </script>
 </body>
 </html>
