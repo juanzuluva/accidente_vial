@@ -15,6 +15,7 @@
 
     <!-- Sección del Banner Principal -->
     <section class="banner">
+        <!-- Contenido opcional para el banner -->
     </section>
 
     <!-- Sección de Contacto -->
@@ -37,6 +38,8 @@
                 <label for="mensaje">Mensaje:</label>
                 <textarea id="mensaje" name="mensaje" rows="5" required></textarea> <!-- Campo para escribir el mensaje -->
             </div>
+            <!-- Campo oculto para redirigir a una página de agradecimiento opcional -->
+            <input type="hidden" name="_next" value="https://tusitio.com/gracias.html">
             <button type="submit">Enviar</button> <!-- Botón de envío -->
         </form>
     </section>
@@ -50,6 +53,32 @@
             .then(data => {
                 document.getElementById('navbar').innerHTML = data; // Inserta la navegación
             });
+
+        // Capturar el evento de envío del formulario para mostrar mensajes de éxito o error
+        document.getElementById("contact-form").addEventListener("submit", async function (event) {
+            event.preventDefault();
+            const form = event.target;
+            const formData = new FormData(form);
+            
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: formData,
+                    headers: {
+                        "Accept": "application/json"
+                    }
+                });
+
+                if (response.ok) {
+                    alert("Mensaje enviado exitosamente.");
+                    form.reset(); // Limpiar el formulario después de enviarlo
+                } else {
+                    alert("Hubo un problema al enviar el mensaje. Inténtalo nuevamente.");
+                }
+            } catch (error) {
+                alert("Error en el envío del formulario. Verifica la conexión.");
+            }
+        });
     </script>
 </body>
 </html>
