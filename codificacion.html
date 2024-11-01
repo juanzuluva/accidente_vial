@@ -1,270 +1,185 @@
-/* Estilos globales para todo el sitio */
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f5f5f5;
-    margin: 0;
-    padding: 0;
-    color: #333;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codificación</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <div id="navbar"></div>
 
-/* Estilos para el encabezado */
-header {
-    background-color: #003366;
-    color: #ffffff;
-    padding: 15px 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
+    <!-- Banner principal -->
+    <section class="banner">
+        <!-- <h1>Observatorio - Codificación</h1> -->
+    </section>
 
-/* Contenedor del encabezado: logo y barra de navegación */
-.header-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    flex-wrap: wrap;
-}
+    <!-- Índice de navegación interna para la sección de Codificación -->
+    <!-- <section class="contenido-seccion" id="codificacion">
+        <h2>Codificación</h2>
+        <p class="intro-text">
+            Explora los temas relacionados con codificación en el análisis de datos de seguridad vial:
+        </p>
+        <ul>
+            <li><a href="#errores">Errores</a></li>
+            <li><a href="#haming">Haming</a></li>
+            <li><a href="#binario">Binario</a></li>
+        </ul>
+    </section> -->
 
-/* Ajuste del contenedor del logo */
-.logo {
-    display: flex;
-    align-items: center;
-    flex-grow: 1;
-    min-width: 150px;
-}
+     <!-- Sección Binario -->
+     <section class="contenido-seccion" id="binario">
+        <h2>Binario</h2>
+        <p class="intro-text">
+            El <strong>código binario</strong> es el lenguaje básico de las computadoras, utilizando solo 0s y 1s. Es la base para el almacenamiento y procesamiento de toda la información digital.
+        </p>
+        <blockquote class="highlight-box">
+            <p>
+                "La simplicidad del código binario lo hace poderoso y versátil para manejar cualquier tipo de dato digital."
+            </p>
+        </blockquote>
+        <p>
+            En análisis de seguridad vial, el binario permite procesar y almacenar grandes cantidades de datos, <span class="highlight">facilitando el análisis avanzado</span> para la toma de decisiones.
+        </p>
+        <div class="contenido-imagen">
+            <img src="conversion-a-binario.jpeg" alt="Representación de código binario">
+        </div>
+    </section>
 
-/* Título observatorio centrado */
-.titulo-observatorio {
-    font-size: 3.5em;
-    color: #ffffff;
-    text-align: center;
-    white-space: nowrap;
-    flex-grow: 2;
-}
+    <!-- Sección de Codificación -->
+    <!-- <section class="contenido-seccion">
+        <h2>Codificación</h2> -->
+        <!-- <p class="intro-text">
+            La codificación es fundamental en el procesamiento de datos para garantizar que la información se maneje de manera consistente y eficiente. En seguridad vial, la codificación de datos facilita el análisis de patrones y tendencias.
+        </p> -->
+        <!-- <blockquote class="highlight-box">
+            <p>
+                "Codificar datos correctamente es el primer paso para construir un análisis confiable y útil para la sociedad."
+            </p>
+        </blockquote>
+        <p>
+            La codificación permite transformar la información en una forma que puede analizarse fácilmente, proporcionando <span class="highlight">insights clave</span> para la toma de decisiones en seguridad vial.
+        </p>
+        <div class="contenido-imagen">
+            <img src="codificacion.jpg" alt="Ejemplos de codificación de datos">
+        </div>
+    </section> -->
 
-/* Logo del encabezado */
-.logo img {
-    max-width: 150px;
-}
+    
+    <!-- Sección Hamming -->
+    <section class="contenido-seccion" id="hamming">
+        <h2>Hamming</h2>
+        <p class="intro-text">
+            El <strong>código de Hamming</strong> es una técnica utilizada para detectar y corregir errores en la transmisión de datos, asegurando la integridad de la información recibida.
+        </p>
+        <blockquote class="highlight-box">
+            <p>
+                "La corrección de errores asegura que los datos mantengan su precisión y fiabilidad, incluso en entornos críticos."
+            </p>
+        </blockquote>
+        <p class="detailed-explanation">
+            El método de codificación Hamming agrega bits de paridad a un mensaje para detectar y corregir errores en la transmisión. Para aplicar el código Hamming al número binario <strong>1101100001100</strong>, vamos a seguir el procedimiento estándar para obtener el código Hamming de este valor.
+        </p>
 
-/* Lista de navegación en el encabezado */
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-grow: 1;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-}
+        <ol class="hamming-steps">
+            <li>
+                <strong>Identificar la cantidad de bits de paridad necesarios:</strong> <br>
+                Para una palabra de datos de 13 bits, se necesitan al menos 4 bits de paridad, porque (2<sup>4</sup> = 16), que es suficiente para cubrir nuestros 13 bits de datos más los bits de paridad.
+            </li>
+            <li>
+                <strong>Colocar los bits de paridad en las posiciones correspondientes:</strong> <br>
+                Los bits de paridad se colocan en posiciones que son potencias de 2 (1, 2, 4, 8, ...). La cadena de bits de datos se ajusta dejando esas posiciones de paridad en blanco, y después se completarán.
+                <ul class="positions-list">
+                    <li>Posición 1: paridad</li>
+                    <li>Posición 2: paridad</li>
+                    <li>Posición 3: 1</li>
+                    <li>Posición 4: paridad</li>
+                    <li>Posición 5: 1</li>
+                    <li>Posición 6: 0</li>
+                    <li>Posición 7: 1</li>
+                    <li>Posición 8: paridad</li>
+                    <li>Posición 9: 0</li>
+                    <li>Posición 10: 0</li>
+                    <li>Posición 11: 0</li>
+                    <li>Posición 12: 1</li>
+                    <li>Posición 13: 1</li>
+                    <li>Posición 14: 0</li>
+                    <li>Posición 15: 0</li>
+                </ul>
+                Esto nos da una secuencia con espacios en blanco para los bits de paridad:<br>
+                <code class="bit-sequence">_ _ 1 _ 1 0 1 _ 0 0 0 1 1 0 0</code>
+            </li>
+            <li>
+                <strong>Calcular los valores de los bits de paridad:</strong> <br>
+                Los bits de paridad se calculan para que la suma de los bits en posiciones específicas sea par (paridad par). Vamos a calcular los valores de los bits de paridad y colocarlos en la secuencia.
+            </li>
+        </ol>
+        
+        <p class="final-sequence">
+            El código Hamming para el número binario <strong>1101100001100</strong> es: <code class="bit-sequence">10101011100001100</code>
+        </p>
+        <p class="final-message">
+            Este código Hamming ahora incluye los bits de paridad para poder detectar y corregir errores en la transmisión de estos datos.
+        </p>
+    </section>
 
-/* Elementos de la lista de navegación */
-nav ul li {
-    margin-right: 20px;
-}
+   <!-- Sección Checksum -->
+   <section class="contenido-seccion" id="checksum">
+    <h2>Checksum</h2>
+    <p class="intro-text">
+        El checksum es un método de verificación utilizado para detectar errores en la transmisión de datos. Mediante un valor de verificación, se puede comprobar la integridad del mensaje transmitido.
+    </p>
+    <blockquote class="highlight-box">
+        <p>
+            "El uso de checksums ayuda a asegurar que los datos recibidos coincidan con los enviados, garantizando integridad en la transmisión."
+        </p>
+    </blockquote>
+    <p class="detailed-explanation">
+        Para aplicar la técnica de Checksum al número binario <strong>1101100001100</strong>, seguimos un proceso de suma binaria y luego obtenemos el complemento para crear el valor de checksum. Vamos a realizarlo paso a paso:
+    </p>
 
-/* Estilo para los enlaces de la navegación */
-nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
+    <ol class="checksum-steps">
+        <li>
+            <strong>Dividir el número en segmentos:</strong> <br>
+            Dividimos el número binario 1101100001100 en segmentos de tamaño fijo. En este caso, tomaremos bloques de 4 bits cada uno:<br>
+            <code class="bit-sequence">1101, 1000, 0110, 0000</code> <br>
+            Así, los bloques son: 1101, 1000, 0110, y 0000.
+        </li>
+        <li>
+            <strong>Sumar los bloques en binario:</strong> <br>
+            Realizamos la suma binaria de estos bloques. Si se produce un desbordamiento (carry), lo sumamos también al resultado.
+        </li>
+        <li>
+            <strong>Calcular el complemento:</strong> <br>
+            Al final, aplicamos el complemento (invertir los bits) del resultado de la suma para obtener el checksum.
+        </li>
+    </ol>
+    
+    <p class="final-sequence">
+        El checksum calculado para el número binario 1101100001100 es:
+        <code class="bit-sequence">0011</code> <br>
+        <br>
+        La suma directa de los cuatro bloques binarios 1101, 1000, 0110 y 0000 sin considerar el desbordamiento (carry) es:<br>
+        <code class="bit-sequence">11011</code> <br>
+        <br>
+        Este resultado tiene 5 bits, lo cual confirma que se generó un desbordamiento que luego fue manejado al calcular el checksum final (0011).
+        <br>
+        Este valor se usa para verificar la integridad de los datos, ya que permite detectar si se produjo algún error durante la transmisión al recalcular y comparar el checksum.
+    </p>
+</section>
 
-/* Estilo para los enlaces al pasar el ratón */
-nav ul li a:hover {
-    color: #ffcc00;
-}
 
-/* Media queries para pantallas pequeñas */
-@media (max-width: 768px) {
-    .header-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav ul {
-        justify-content: center;
-        margin-top: 10px;
-    }
-
-    .titulo-observatorio {
-        margin-top: 10px;
-    }
-}
-
-/* Estilo del banner principal */
-.banner {
-    background: url('banner.png') center center/cover no-repeat;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-    text-align: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Título dentro del banner */
-.banner h1 {
-    font-size: 3em;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #000000;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    margin: 0;
-}
-
-/* Sección principal de contenido */
-.contenido-seccion {
-    padding: 40px;
-    background-color: #ffffff;
-    margin: 30px auto;
-    max-width: 1000px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-/* Título de las secciones */
-.contenido-seccion h2 {
-    font-size: 2.5em;
-    color: #003366;
-    margin-bottom: 20px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-}
-
-/* Texto introductorio */
-.intro-text {
-    font-size: 1.2em;
-    line-height: 1.6;
-    color: #444;
-    margin-bottom: 20px;
-}
-
-/* Estilo para los pasos del código de contenido */
-.checksum-steps{
-    list-style-type: decimal;
-    padding-left: 20px;
-    text-align: left;
-    font-size: 1em;
-    line-height: 1.6;
-}
-
-/* Lista de enlaces en la sección de Codificación */
-.contenido-seccion ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: left;
-}
-
-.contenido-seccion ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-.contenido-seccion ul li a {
-    color: #003366;
-    font-weight: bold;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.contenido-seccion ul li a:hover {
-    color: #e67e22;
-}
-
-/* Caja de resalto (cita o información importante) */
-.highlight-box {
-    border-left: 5px solid #003366;
-    background-color: #eaf2f8;
-    padding: 20px;
-    margin: 20px 0;
-    font-style: italic;
-    font-size: 1.1em;
-    color: #003366;
-    text-align: left;
-}
-
-/* Resaltar palabras clave en el texto */
-.highlight {
-    color: #e67e22;
-    font-weight: bold;
-}
-
-/* Texto importante */
-.important {
-    color: #d35400;
-    font-weight: bold;
-}
-
-/* Mensaje final de la sección */
-.final-message {
-    font-size: 1.4em;
-    color: #2c3e50;
-    font-weight: 500;
-    line-height: 1.7;
-    text-align: left;
-}
-
-/* Estilo para explicación detallada */
-.detailed-explanation {
-    font-size: 1.1em;
-    line-height: 1.6;
-    color: #444;
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-/* Estilo para los pasos del código de Hamming */
-.hamming-steps {
-    list-style-type: decimal;
-    padding-left: 20px;
-    text-align: left;
-    font-size: 1em;
-    line-height: 1.6;
-}
-
-.hamming-steps li {
-    margin-bottom: 15px;
-}
-
-/* Estilo para la lista de posiciones de bits */
-.positions-list {
-    list-style-type: none;
-    padding-left: 20px;
-    margin: 10px 0;
-    color: #003366;
-}
-
-.positions-list li {
-    margin-bottom: 5px;
-}
-
-/* Estilo para secuencias de bits */
-.bit-sequence {
-    display: block;
-    background-color: #eaf2f8;
-    color: #003366;
-    font-weight: bold;
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
-    font-family: monospace;
-    margin: 10px 0;
-    font-size: 1.2em;
-}
-
-/* Imagen dentro de la sección */
-.contenido-imagen img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
-    margin-top: 30px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
+    <!-- JavaScript para cargar la barra de navegación -->
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
