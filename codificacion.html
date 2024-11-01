@@ -5,16 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Codificación</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="navbar"></div>
 
-    <main>
-        <h1>Codificación</h1>
-        <p>La codificación es el proceso de convertir datos de un formato a otro, especialmente útil en la comunicación y el almacenamiento de información. En el ámbito de la seguridad vial y análisis de datos, la codificación permite organizar y simplificar la información para realizar análisis estadísticos y comparaciones.</p>
-        <p>Esta página detalla los métodos de codificación utilizados para interpretar y gestionar datos en el contexto de la seguridad vial.</p>
-    </main>
+    <section class="banner">
+    </section>
 
-    <script src="script.js"></script>
+    <section class="contenido-seccion" id="codificacion">
+        <h2>Codificación</h2>
+        <p class="intro-text">
+            La <strong>codificación</strong> es fundamental en el procesamiento de datos para garantizar que la información se maneje de manera consistente y eficiente. En seguridad vial, la codificación de datos facilita el análisis de patrones y tendencias.
+        </p>
+        <blockquote class="highlight-box">
+            <p>
+                "Codificar datos correctamente es el primer paso para construir un análisis confiable y útil para la sociedad."
+            </p>
+        </blockquote>
+        <p>
+            La codificación permite transformar la información en una forma que puede analizarse fácilmente, proporcionando <span class="highlight">insights clave</span> para la toma de decisiones en seguridad vial.
+        </p>
+        <div class="contenido-imagen">
+            <img src="codificacion.jpg" alt="Ejemplos de codificación de datos">
+        </div>
+    </section>
+
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+    </script>
 </body>
 </html>
