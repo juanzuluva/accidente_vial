@@ -144,11 +144,20 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
+/* Estilo para los pasos del código de contenido */
+.checksum-steps{
+    list-style-type: decimal;
+    padding-left: 20px;
+    text-align: left;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
 /* Lista de enlaces en la sección de Codificación */
 .contenido-seccion ul {
     list-style-type: none;
     padding: 0;
-    text-align: center;
+    text-align: left;
 }
 
 .contenido-seccion ul li {
