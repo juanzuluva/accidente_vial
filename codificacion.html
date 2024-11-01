@@ -127,24 +127,45 @@
         </p>
     </section>
 
-   <!-- Sección Errores -->
-   <section class="contenido-seccion" id="errores">
-    <h2>Errores</h2>
+   <!-- Sección Checksum -->
+   <section class="contenido-seccion" id="checksum">
+    <h2>Checksum</h2>
     <p class="intro-text">
-        Los errores en el manejo de datos pueden afectar gravemente los resultados del análisis. Comprender los <strong>tipos de errores</strong> y cómo mitigarlos es esencial en proyectos de datos de seguridad vial.
+        El checksum es un método de verificación utilizado para detectar errores en la transmisión de datos. Mediante un valor de verificación, se puede comprobar la integridad del mensaje transmitido.
     </p>
     <blockquote class="highlight-box">
         <p>
-            "Identificar y corregir errores en los datos es vital para un análisis preciso y fiable."
+            "El uso de checksums ayuda a asegurar que los datos recibidos coincidan con los enviados, garantizando integridad en la transmisión."
         </p>
     </blockquote>
-    <p>
-        Este conocimiento permite <span class="highlight">minimizar los sesgos</span> y asegurar que las políticas de seguridad vial se basen en datos confiables y precisos.
+    <p class="detailed-explanation">
+        Para aplicar la técnica de Checksum al número binario <strong>1101100001100</strong>, seguimos un proceso de suma binaria y luego obtenemos el complemento para crear el valor de checksum. Vamos a realizarlo paso a paso:
     </p>
-    <div class="contenido-imagen">
-        <img src="errores.jpg" alt="Análisis de errores en datos">
-    </div>
-    </section>
+
+    <ol class="checksum-steps">
+        <li>
+            <strong>Dividir el número en segmentos:</strong> <br>
+            Dividimos el número binario 1101100001100 en segmentos de tamaño fijo. En este caso, tomaremos bloques de 4 bits cada uno:<br>
+            <code class="bit-sequence">1101, 1000, 0110, 0000</code> <br>
+            Así, los bloques son: 1101, 1000, 0110, y 0000.
+        </li>
+        <li>
+            <strong>Sumar los bloques en binario:</strong> <br>
+            Realizamos la suma binaria de estos bloques. Si se produce un desbordamiento (carry), lo sumamos también al resultado.
+        </li>
+        <li>
+            <strong>Calcular el complemento:</strong> <br>
+            Al final, aplicamos el complemento (invertir los bits) del resultado de la suma para obtener el checksum.
+        </li>
+    </ol>
+    
+    <p class="final-sequence">
+        El checksum calculado para el número binario <strong>1101100001100</strong> es: <code class="bit-sequence">0011</code>
+    </p>
+    <p class="final-message">
+        Este valor se usa para verificar la integridad de los datos, ya que permite detectar si se produjo algún error durante la transmisión al recalcular y comparar el checksum.
+    </p>
+</section>
 
     <!-- JavaScript para cargar la barra de navegación -->
     <script>
