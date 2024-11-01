@@ -160,12 +160,18 @@
     </ol>
     
     <p class="final-sequence">
-        El checksum calculado para el número binario <strong>1101100001100</strong> es: <code class="bit-sequence">0011</code>
+        La suma directa de los cuatro bloques binarios 1101, 1000, 0110 y 0000 sin considerar el desbordamiento (carry) es:<br>
+        <code class="bit-sequence">11011</code><br>
     </p>
+
     <p class="final-message">
+        Este resultado tiene 5 bits, lo cual confirma que se generó un desbordamiento que luego fue manejado al calcular el checksum final.
+        <br>
+        <br>
         Este valor se usa para verificar la integridad de los datos, ya que permite detectar si se produjo algún error durante la transmisión al recalcular y comparar el checksum.
     </p>
 </section>
+
 
     <!-- JavaScript para cargar la barra de navegación -->
     <script>
